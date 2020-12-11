@@ -21,6 +21,9 @@
           GitHub
         </a>
       </div>
+      <div id="app-6">
+        <p>{{ message }}-text</p>
+      </div>
     </div>
   </div>
 </template>
@@ -28,7 +31,13 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  data() {
+    return {
+      message: 'hoge',
+    }
+  },
+})
 </script>
 
 <style>
