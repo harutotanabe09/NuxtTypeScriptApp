@@ -31,6 +31,9 @@ $ yarn generate
 
 # Check Command
 $ yarn eslint
+
+# Yarn Package 
+$ yarn add --dev sass sass-loader fibers
 ```
 
 ### Note
