@@ -2,9 +2,6 @@
   <div class="container">
     <h1 class="title">{{ title }}</h1>
     <p>{{ message }}</p>
-    <hr class="hr" />
-    <pre class="pre"> {{ now }}</pre>
-    <NuxtLink to="/other">About!!</NuxtLink>
   </div>
 </template>
 
@@ -13,17 +10,9 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      title: 'Hello!',
-      message: 'This is a message',
-      now: 'waiting ...',
+      title: 'Other!',
+      message: 'Message',
     }
-  },
-  // typescript
-  created(): void {
-    setInterval(() => {
-      const d = new Date()
-      this.now = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
-    }, 300)
   },
 })
 </script>
@@ -53,8 +42,5 @@ export default Vue.extend({
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
-}
-.nuxt-link-active {
-  color: red;
 }
 </style>
