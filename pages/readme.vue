@@ -1,29 +1,36 @@
 <template>
   <div class="container">
     <h1 class="title">{{ title }}</h1>
-    <p>{{ message }}</p>
-    <hr class="hr" />
-    <pre class="pre"> {{ now }}</pre>
-    <NuxtLink to="/other">About!!</NuxtLink>
+    <p>{{ html_date }}</p>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import axios from 'axios'
+
+// type指定
+type testData = {
+  name: number
+  movie: string
+}
+
 export default Vue.extend({
-  data() {
-    return {
-      title: 'Hello!',
-      message: 'This is a message',
-      now: 'waiting ...',
+  async asyncData() {
+    try {
+      const rese = await axios.get<testData>(
+        'https://jsondata.okiba.me/v1/json/z9Hu6180423002129'
+      )
+      return { html_date: rese.data }
+    } catch (err) {
+      throw new Error(err.status)
     }
   },
-  // typescript
-  created(): void {
-    setInterval(() => {
-      const d = new Date()
-      this.now = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
-    }, 300)
+  data() {
+    return {
+      title: 'Axios!',
+      message: 'axios message',
+    }
   },
 })
 </script>
