@@ -4,7 +4,13 @@
     <p>{{ message }}</p>
     <hr />
     <input v-model="msg" type="text" />
-    <button @click="doClick">Click</button>
+    <app-button
+      class="input-app"
+      type="input"
+      name="input-button"
+      @click="doClick"
+      >登録ボタン</app-button
+    >
     <PostComponent :post="post" class="name" />
   </div>
 </template>
@@ -13,11 +19,12 @@
 import Vue from 'vue'
 import axios from 'axios'
 import PostComponent from '~/components/PostComponent.vue'
+import AppButton from '~/components/ui/AppButton.vue'
 
 const url = 'https://jsonplaceholder.typicode.com/posts/'
 
 export default Vue.extend({
-  components: { PostComponent },
+  components: { PostComponent, AppButton },
   data() {
     return {
       title: 'Axios!',
@@ -28,10 +35,15 @@ export default Vue.extend({
   },
   methods: {
     doClick() {
-      axios.get(url + this.msg).then((res) => {
-        this.message = 'get ID =' + this.msg
-        this.post = res.data
-      })
+      axios
+        .get(url + this.msg)
+        .then((res) => {
+          this.message = 'get ID =' + this.msg
+          this.post = res.data
+        })
+        .catch((error: Error) => {
+          this.message = 'ERROR ' + error.message
+        })
     },
   },
 })

@@ -13,8 +13,10 @@ export default Vue.extend({
   name: 'PostComponent',
   props: {
     post: {
+      // [TODO] Init TypeError
       type: Object as PropType<Post>,
-      required: true,
+      required: false,
+      default: '',
     },
   },
 })
