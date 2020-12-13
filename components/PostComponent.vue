@@ -14,7 +14,8 @@ export default Vue.extend({
   props: {
     post: {
       type: Object as PropType<Post>,
-      required: true,
+      required: false,
+      default: '',
     },
   },
 })

@@ -4,7 +4,7 @@
     <p>{{ message }}</p>
     <hr />
     <input v-model="msg" type="text" />
-    <button @click="doClick">Click</button>
+    <app-button @click="doClick">登録ボタン</app-button>
     <PostComponent :post="post" class="name" />
   </div>
 </template>
@@ -13,11 +13,12 @@
 import Vue from 'vue'
 import axios from 'axios'
 import PostComponent from '~/components/PostComponent.vue'
+import AppButton from '~/components/ui/AppButton.vue'
 
 const url = 'https://jsonplaceholder.typicode.com/posts/'
 
 export default Vue.extend({
-  components: { PostComponent },
+  components: { PostComponent, AppButton },
   data() {
     return {
       title: 'Axios!',
