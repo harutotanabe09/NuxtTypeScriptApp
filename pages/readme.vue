@@ -9,7 +9,8 @@
 import Vue from 'vue'
 import axios from 'axios'
 
-interface testData {
+// type指定
+type testData = {
   name: number
   movie: string
 }
