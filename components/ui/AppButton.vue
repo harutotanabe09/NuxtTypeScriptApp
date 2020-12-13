@@ -30,6 +30,6 @@ export default Vue.extend({
   padding: 5px 10px;
   border-radius: 5px;
   text-align: center;
-  background-color: brown;
+  background-color: #f6bfbc;
 }
 </style>

@@ -4,7 +4,13 @@
     <p>{{ message }}</p>
     <hr />
     <input v-model="msg" type="text" />
-    <app-button @click="doClick">登録ボタン</app-button>
+    <app-button
+      class="input-app"
+      type="input"
+      name="input-button"
+      @click="doClick"
+      >登録ボタン</app-button
+    >
     <PostComponent :post="post" class="name" />
   </div>
 </template>
@@ -29,10 +35,15 @@ export default Vue.extend({
   },
   methods: {
     doClick() {
-      axios.get(url + this.msg).then((res) => {
-        this.message = 'get ID =' + this.msg
-        this.post = res.data
-      })
+      axios
+        .get(url + this.msg)
+        .then((res) => {
+          this.message = 'get ID =' + this.msg
+          this.post = res.data
+        })
+        .catch((error: Error) => {
+          this.message = 'ERROR ' + error.message
+        })
     },
   },
 })
