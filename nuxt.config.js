@@ -25,10 +25,7 @@ export default {
         },
       },
     ],
-    stories: [
-      '~/components/**/*.stories.js',
-      // '~/stories/**/*.stories.js',
-    ],
+    stories: ['~/components/**/*.stories.js'],
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
