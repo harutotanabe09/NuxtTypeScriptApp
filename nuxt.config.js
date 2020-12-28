@@ -45,6 +45,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
+    '@nuxtjs/axios',
   ],
 
   styleResources: {

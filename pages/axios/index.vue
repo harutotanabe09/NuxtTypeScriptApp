@@ -7,13 +7,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import axios from 'axios'
 
 const url = 'https://jsonplaceholder.typicode.com/posts/'
 
 export default Vue.extend({
-  async asyncData() {
-    const rese = await axios.get(url)
+  async asyncData({ $axios }) {
+    const rese = await $axios.get(url)
     return {
       isLoading: false,
       posts: rese.data,

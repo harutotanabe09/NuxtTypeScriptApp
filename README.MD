@@ -50,7 +50,8 @@ $ yarn add --dev sass sass-loader fibers
 
 https://typescript.nuxtjs.org/ja/cookbook/modules
 
-- TODO：Nuxtタグ
+- [x] TODO:Axiosを自動でインポート
+     https://noumenon-th.net/programming/2019/07/15/axios-module/
 - TODO:親から子供への渡し方
 - TODO：アニメーションの設定
 - TODO：PRECOMMITはデフォルトで入っている
