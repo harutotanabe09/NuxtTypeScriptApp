@@ -1,0 +1,86 @@
+// colors
+$default-color: #F7F8FA;
+$primary-color: #2993ff;
+$secondary-color: #53beff;
+$white-color: #fff;
+$black-color: #000;
+$primary-color-light: #E1E9F8;
+$dark-blue-color: #434A5E;
+$light-green-color: #8AD513;
+
+$input-border-color: #AFAFAF;
+
+$gray-color: #888;
+$light-gray-color: #DBDBDB;
+$dimmed-blue-color: #95979B;
+
+// fonts
+$tiny-font-size: 8px;
+$smaller-font-size: 10px;
+$small-font-size: 12px;
+$normal-font-size: 14px;
+$large-font-size: 20px;
+
+$gothic: 'Noto Sans JP' , 'Hiragino Kaku Gothic ProN', 'MS Pゴシック', sans-serif;
+
+// Sidemenu
+$side-menu-width: 56px;
+
+// Header
+$header-height: 50px;
+$sp-header-height: 40px;
+
+// Footer
+$footer-height: 41px;
+
+$content-margin-left: 20px;
+$content-margin-right: 20px;
+
+// Login
+$login-backgournd: #f8f8f8;
+$login-input-border: gray;
+
+// input
+$input-padding: 7px 19px;
+$input-bg: #fff;
+$input-border: solid 1px $input-border-color;
+$input-border-radius: 12px;
+$input-line-height: 14px;
+$input-shadow-color: #7C7C7C;
+
+// v-select
+$select-height: 38px;
+$vs-component-line-height: 25px;
+$vs-border-radius: $select-height / 2;
+$vs-border-color: $input-border-color;
+
+// button
+$button-default-color: #434a5e;
+$button-background-primary-from: #0f86ff;
+$button-background-primary-to: #29a4ef;
+
+// panel
+$panel-light-shadow: rgba($black-color, 0.16);
+
+// charts
+$answer-rate-border-color: rgb(37, 208, 208);
+$answer-rate-bg-color: rgb(255, 255, 255);
+$answer-num-bg-color: rgba(14, 204, 146, 0.8);
+$not-answered-num-bg-color: rgba(149, 219, 102, 1);
+$delivery-num-bg-color: rgba(0, 159, 165, 1);
+
+// conditions
+$sunny-color: rgba(244, 155, 52, 1);
+$cloudy-color: rgba(168, 168, 168, 1);
+$rainy-color: rgba(5, 141, 240, 1);
+
+// CumulativeReport
+$cumulative-report-shadow: rgba($gray-color, 0.54);
+
+// MonthlyReport
+$monthly-report-background: $white-color;
+$monthly-report-light-shadow: rgba($black-color, 0.16);
+$monthly-report-heading-border: $light-gray-color;
+
+// members
+$member-answers-text-color: $light-green-color;

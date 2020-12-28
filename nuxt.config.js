@@ -9,7 +9,27 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
+  storybook: {
+    // Options
+    port: 4000,
+    addons: [
+      '@storybook/addon-controls',
+      '@storybook/addon-notes',
+      {
+        name: '@storybook/preset-scss',
+        options: {
+          cssLoaderOptions: {
+            modules: true,
+            localIdentName: '[name]__[local]--[hash:base64:5]',
+          },
+        },
+      },
+    ],
+    stories: [
+      '~/components/**/*.stories.js',
+      // '~/stories/**/*.stories.js',
+    ],
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
@@ -27,7 +47,12 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    scss: ['~/assets/style/_variables.scss'],
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [

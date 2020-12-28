@@ -29,6 +29,16 @@ $ yarn start
 # generate static project
 $ yarn generate
 
+## How to Start Story Book
+https://storybook.nuxtjs.org/setup
+yarn add --dev @nuxtjs/storybook
+
+# How to start Story Book
+$ yarn nuxt storybook
+
+# How to start Story Book
+$ yarn build storybook
+
 # Check Command
 $ yarn eslint
 
