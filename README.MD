@@ -68,3 +68,4 @@ https://typescript.nuxtjs.org/ja/cookbook/modules
 Herokuのもっと簡易バージョンサービス
 
 https://www.netlify.com/
+https://colorlib.com/preview/#ronaldo
