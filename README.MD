@@ -52,13 +52,15 @@ https://typescript.nuxtjs.org/ja/cookbook/modules
 
 - [x] TODO:Axiosを自動でインポート
      https://noumenon-th.net/programming/2019/07/15/axios-module/
-- TODO:親から子供への渡し方
-- TODO：アニメーションの設定
-- TODO：PRECOMMITはデフォルトで入っている
+- [x] TODO:Webfontを使うためのインポート
+      webfontloader
+- [x] TODO：PRECOMMITはデフォルトで入っている
+      husky
+- [x] TODO：assetsで共通のCSSかける
+      styleResources
+- [x] TODO：コミット前のおまじない追加
+      package.jsonコマンド追加
 - TODO：Nuxt-Childの使い方
-- TODO：assetsで共通のCSSかける
-- TODO：componentは自動読み込みして使うことができる
-- TODO：コミット前のおまじない yarn eslint
 - TODO：コミットメッセージでエラー　
 - TODO：TSの書き方
 　https://github.com/conventional-changelog/commitlint/#what-is-commitlint

@@ -51,7 +51,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['Kosugi:400,700'],
+      families: ['Poppins:400,700'],
     },
   },
   styleResources: {
