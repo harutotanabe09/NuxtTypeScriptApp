@@ -28,7 +28,7 @@ export default {
     stories: ['~/components/**/*.stories.js'],
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['~/assets/style/main.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -46,8 +46,14 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
+    'nuxt-webfontloader',
   ],
 
+  webfontloader: {
+    google: {
+      families: ['Kosugi:400,700'],
+    },
+  },
   styleResources: {
     scss: ['~/assets/style/_variables.scss'],
   },

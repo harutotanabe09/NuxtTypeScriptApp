@@ -9,13 +9,13 @@
     "generate": "nuxt-ts generate",
     "eslint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint:style": "stylelint **/*.{vue,css,scss,sass} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
     "test": "jest"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
+    "*.{css,scss,sass,vue}": "stylelint"
   },
   "husky": {
     "hooks": {
@@ -28,7 +28,8 @@
     "@nuxtjs/axios": "^5.12.2",
     "core-js": "^3.6.5",
     "node-sass": "^5.0.0",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
@@ -60,6 +61,7 @@
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
     "ts-jest": "^26.4.1",
     "vue-jest": "^3.0.4"
   }
