@@ -1,5 +1,5 @@
 <template>
-  <div class="headsection">
+  <div class="aboutheader">
     <h2 class="subsection">About Me</h2>
     <ul class="info">
       <li v-for="(value, name) in aboutMe" :key="value.id" class="list">
@@ -17,7 +17,7 @@ export default Vue.extend({
   name: 'AboutMe',
   props: {
     aboutMe: {
-      type: Array,
+      type: Object,
       required: true,
     },
   },
@@ -25,10 +25,12 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.headsection {
+.aboutheader {
   font-size: 50px;
   font-weight: 700;
+  margin-bottom: 1.5rem !important;
   .info {
+    font-size: 16px;
     .list {
       list-style: none;
       margin-bottom: 10px;
