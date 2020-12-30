@@ -69,7 +69,7 @@ https://typescript.nuxtjs.org/ja/cookbook/modules
 
 Herokuのもっと簡易バージョンサービス
 
-https://www.netlify.com/
+https://www.netlify.cgitom/
 https://colorlib.com/preview/#ronaldo
 
 ### Style
