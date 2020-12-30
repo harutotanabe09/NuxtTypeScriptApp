@@ -1,17 +1,20 @@
 <template>
   <div id="exprericenceheader">
-    <h2 class="heading">Experience</h2>
-    <div v-for="item in experienceMe" :key="item.id" class="resume-wrap">
-      <div class="icon d-flex align-items-center justify-content-center">
-        <span class="flaticon-ideas"></span>
-      </div>
-      <div class="text pl-3">
-        <div class="date">{{ item.date }}</div>
-        <h2 class="contents">{{ item.contents }}</h2>
-        <div class="position">{{ item.position }}</div>
-        <p class="message">
-          {{ item.message }}
-        </p>
+    <p v-if="$fetchState.pending" class="loading">Loading...</p>
+    <div v-else class="loaded">
+      <h2 class="heading">Experience</h2>
+      <div v-for="item in experienceMe" :key="item.id" class="resume-wrap">
+        <div class="icon d-flex align-items-center justify-content-center">
+          <span class="flaticon-ideas"></span>
+        </div>
+        <div class="text pl-3">
+          <div class="date">{{ item.date }}</div>
+          <h2 class="contents">{{ item.contents }}</h2>
+          <div class="position">{{ item.position }}</div>
+          <p class="message">
+            {{ item.message }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -21,12 +24,14 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'ExperienceMe',
+  fetchDelay: 5000,
   props: {
     experienceMe: {
       type: Array,
       required: true,
     },
   },
+  async fetch() {},
 })
 </script>
 

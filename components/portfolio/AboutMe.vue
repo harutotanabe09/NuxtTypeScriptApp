@@ -1,7 +1,6 @@
 <template>
-  <lazy-div id="aboutheader">
-    <p v-if="$fetchState.pending">Loading...</p>
-    <div v-else class="out">
+  <div id="aboutheader">
+    <div class="out">
       <h2 class="subsection">About Me</h2>
       <ul class="info">
         <li v-for="(value, name) in aboutMe" :key="value.id" class="list">
@@ -11,21 +10,19 @@
         </li>
       </ul>
     </div>
-  </lazy-div>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
   name: 'AboutMe',
-  fetchDelay: 3000,
   props: {
     aboutMe: {
       type: Object,
       required: true,
     },
   },
-  async fetch() {},
 })
 </script>
 

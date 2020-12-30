@@ -27,14 +27,6 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.transition-enter-active,
-.transition-leave-active {
-  transition: opacity 0.5s;
-}
-.transition-enter,
-.transition-leave-active {
-  opacity: 0;
-}
 #skillheader {
   .heading {
     font-weight: 800;
