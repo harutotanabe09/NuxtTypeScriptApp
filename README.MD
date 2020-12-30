@@ -61,7 +61,7 @@ https://typescript.nuxtjs.org/ja/cookbook/modules
 - [x] TODO：コミット前のおまじない追加
       package.jsonコマンド追加
 - TODO：Nuxt-Childの使い方
-- TODO：コミットメッセージでエラー　
+
 - TODO：TSの書き方
 　https://github.com/conventional-changelog/commitlint/#what-is-commitlint
 
@@ -77,3 +77,12 @@ https://colorlib.com/preview/#ronaldo
 scoped 属性をもつ <style> タグを利用するとき、その CSS は現在のコンポーネントの要素にのみ適用されます。
 
 https://vue-loader-v14.vuejs.org/ja/features/scoped-css.html
+
+### ChartJS
+
+yarn add vue-chartjs chart.js
+
+componentでTSファイル作成
+TSのcomponetをさらにVueのコンポーネントで読み込む
+
+https://vue-chartjs.org/ja/api/#%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AE%E8%BF%BD%E5%8A%A0
