@@ -30,7 +30,7 @@ export default Vue.extend({
           date: '2011-2014',
           contents: 'テスター&パッケージカスタマイズ',
           position: 'メンバー',
-          message: 'Oracle CRM OnDemandのカスタマイズ保守（11社）',
+          message: 'Oracle CRM OnDemandのカスタマイズ保守（11社担当）',
         },
         {
           date: '2014-2016',
