@@ -5,6 +5,7 @@
       class="experience"
       :experience-me="experienceRes"
     ></experience-me>
+    <skill-me class="skill" :skill-me="skillRes"></skill-me>
   </div>
 </template>
 
@@ -34,6 +35,16 @@ export default Vue.extend({
           position: 'Member',
           message:
             'A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.',
+        },
+      ],
+      skillRes: [
+        {
+          name: 'CSS',
+          parcent: '90',
+        },
+        {
+          name: 'HTML',
+          parcent: '90',
         },
       ],
     }

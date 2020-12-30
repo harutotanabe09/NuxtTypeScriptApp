@@ -1,5 +1,5 @@
 <template>
-  <div class="exprericenceheader">
+  <div id="exprericenceheader">
     <h2 class="heading">Experience</h2>
     <div v-for="item in experienceMe" :key="item.id" class="resume-wrap">
       <div class="icon d-flex align-items-center justify-content-center">
@@ -31,7 +31,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.exprericenceheader {
+#exprericenceheader {
   font-size: 50px;
   font-weight: 700;
   .heading {

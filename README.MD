@@ -71,3 +71,9 @@ Herokuのもっと簡易バージョンサービス
 
 https://www.netlify.com/
 https://colorlib.com/preview/#ronaldo
+
+### Style
+
+scoped 属性をもつ <style> タグを利用するとき、その CSS は現在のコンポーネントの要素にのみ適用されます。
+
+https://vue-loader-v14.vuejs.org/ja/features/scoped-css.html
