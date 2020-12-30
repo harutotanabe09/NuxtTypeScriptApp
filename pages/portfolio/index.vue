@@ -34,7 +34,7 @@ export default Vue.extend({
         },
         {
           date: '2014-2016',
-          contents: '常駐先アプリ開発エンジニア',
+          contents: '常駐先デスクトップアプリ開発エンジニア',
           position: 'メンバー',
           message: '某保険会社でのデスクトップアプリ開発（マクロ,Acess,C#)',
         },
