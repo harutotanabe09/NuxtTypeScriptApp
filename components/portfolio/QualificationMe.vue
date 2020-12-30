@@ -4,7 +4,8 @@
     <div v-for="item in qualificationMe" :key="item.id" class="row">
       <transition name="home">
         <div class="col">
-          <p class="name">{{ item.name }}</p>
+          <img :src="item.image_uri" class="image" />
+          <span class="name">{{ item.name }}</span>
           <div class="detail">{{ item.detail }}</div>
           <div class="date">{{ item.getDate }}</div>
         </div>
@@ -38,18 +39,23 @@ export default Vue.extend({
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    .name {
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-    }
-    .detail {
-      color: #006dcc;
-      text-decoration: none;
-      transition: color 0.1s linear;
-    }
-    .date {
-      font-weight: bold;
-      font-weight: 700;
+    img {
+      display: inline;
+      width: 50px;
+      height: auto;
+      .name {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+      }
+      .detail {
+        color: #006dcc;
+        text-decoration: none;
+        transition: color 0.1s linear;
+      }
+      .date {
+        font-weight: bold;
+        font-weight: 700;
+      }
     }
   }
 }
