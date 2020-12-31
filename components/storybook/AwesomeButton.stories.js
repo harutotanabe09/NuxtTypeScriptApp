@@ -12,7 +12,7 @@ export const MyAwesomeButton = ({ label }) => ({
       default: label,
     },
     color: {
-      default: '#8d6449',
+      default: '#777777',
     },
   },
   methods: {
