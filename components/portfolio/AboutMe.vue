@@ -37,25 +37,25 @@ export default Vue.extend({
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 1.5rem !important;
-  .image {
+  > .image {
     display: inline;
     width: 250px;
     height: auto;
   }
-  .out {
+  > .out {
     padding: 3rem !important;
     display: inline-block;
-    .info {
+    > .info {
       font-size: 16px;
-      .list {
+      > .list {
         list-style: none;
         margin-bottom: 10px;
-        .name {
+        > .name {
           font-weight: 600;
           color: #000;
           width: 130px;
         }
-        .value {
+        > .value {
           font-size: 16px;
           line-height: 1.8;
           font-weight: 400;

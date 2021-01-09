@@ -60,6 +60,9 @@ https://typescript.nuxtjs.org/ja/cookbook/modules
       styleResources
 - [x] TODO：コミット前のおまじない追加
       package.jsonコマンド追加
+- [x] TODO：chartJSでの図
+      vuecharjsを使用して実行。typescriptのコンポーネント書いて、そのページを読み込ませる
+        
 - TODO：Nuxt-Childの使い方
 
 - TODO：TSの書き方
