@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="main">
+    <h2>h2</h2>
+    <transition name="page">
+      <Nuxt />
+    </transition>
   </div>
 </template>
 

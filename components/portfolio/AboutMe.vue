@@ -3,6 +3,12 @@
     <img :src="image" class="image" />
     <div class="out">
       <span class="subsection">About Me</span>
+      <div class="container">
+        <nuxt-link to="/other">MOVE</nuxt-link>
+      </div>
+      <transition name="fade">
+        <span v-if="show">/////</span>
+      </transition>
       <ul class="info">
         <li v-for="(value, name) in aboutMe" :key="value.id" class="list">
           <span class="name">{{ name }}</span
@@ -18,6 +24,9 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'AboutMe',
+  transition: {
+    name: 'fade',
+  },
   props: {
     aboutMe: {
       type: Object,
@@ -26,6 +35,7 @@ export default Vue.extend({
   },
   data(): {} {
     return {
+      show: false,
       image: '/img/animal_fukurou.png',
     }
   },
@@ -45,6 +55,12 @@ export default Vue.extend({
   > .out {
     padding: 3rem !important;
     display: inline-block;
+    > .fade-enter {
+      opacity: 0;
+    }
+    > .fade-enter-active {
+      transition: opacity 0.7s;
+    }
     > .info {
       font-size: 16px;
       > .list {

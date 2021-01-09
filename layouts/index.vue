@@ -2,7 +2,9 @@
   <div class="layout">
     <div class="body">
       <app-header />
-      <Nuxt class="content" />
+      <transition name="page" appear>
+        <Nuxt class="content" />
+      </transition>
       <app-footer />
     </div>
   </div>
@@ -15,5 +17,13 @@ export default Vue.extend({})
 <style lang="scss" scoped>
 .body {
   width: 1500px;
+}
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 5s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
 }
 </style>
