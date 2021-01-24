@@ -67,6 +67,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/vuetify',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2>h2</h2>
+    <h2>Layout</h2>
     <transition name="page">
       <Nuxt />
     </transition>
