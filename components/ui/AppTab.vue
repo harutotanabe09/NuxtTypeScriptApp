@@ -1,16 +1,18 @@
 <template>
   <div class="app-tabs" :class="`-${type}`">
-    <transition-group class="slide">
-      <div
-        v-for="item in items"
-        :key="item.label"
-        class="item"
-        :class="{ '-active': value === item.label }"
-        @click="handleClick(item.label)"
-      >
-        {{ item.name }}
-      </div>
-    </transition-group>
+    <div
+      v-for="(item, index) in items"
+      :key="item.label"
+      class="item"
+      :class="{ '-active': value === item.label }"
+      @click="handleClick(index, item.label)"
+    >
+      {{ item.name }}
+    </div>
+    <div
+      class="slider"
+      :style="'transform:translateX(' + activetab * tabwidth + 'px)'"
+    ></div>
   </div>
 </template>
 
@@ -19,6 +21,12 @@ import Vue, { PropType } from 'vue'
 import { AppTab } from '~/types/appTab'
 export default Vue.extend({
   name: 'AppTabs',
+  data(): {} {
+    return {
+      activetab: 0,
+      tabwidth: 100,
+    }
+  },
   props: {
     value: {
       type: String,
@@ -35,7 +43,8 @@ export default Vue.extend({
     },
   },
   methods: {
-    handleClick(tab: String) {
+    handleClick(index: number, tab: String) {
+      this.$data.activetab = index
       this.$emit('change', tab)
       this.$emit('input', tab)
     },
@@ -46,38 +55,25 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .app-tabs {
   display: flex;
-  > .slide {
-    display: flex;
-    > .item {
-      padding: 22px 10px;
-      margin: 0 18px;
-      text-align: center;
-      transition-timing-function: ease-out;
-      transition-duration: 1s;
-      &.-active {
-        color: $text-app-tab;
-        border-bottom: $border-style 3px $border-app-tab;
-        box-shadow: $box-shadow-app-tab;
-      }
+  position: relative;
+  > .item {
+    padding: 22px 10px;
+    margin: 0 18px;
+    text-align: center;
+    &.-active {
+      color: $text-app-tab;
+      border-bottom: $border-style 3px $border-app-tab;
+      box-shadow: $box-shadow-app-tab;
     }
-    &.-block {
-      height: $app-tab-block-height;
-      background-color: $bg-app-tab-block;
-      border-radius: $app-tab-block-height / 2;
-      box-shadow: $box-shadow-app-tab-block;
-      > .item {
-        width: 140px;
-        padding: 12px 0;
-        margin: 0;
-        line-height: $lh-12;
-        &.-active {
-          color: $text-app-button-primary;
-          background: $bg-app-button-primary;
-          border-radius: $app-tab-block-height / 2;
-          box-shadow: $box-shadow-app-tab;
-        }
-      }
-    }
+  }
+  > .slider {
+    transition: 0.5s ease;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    // TODO 高さが直打ちになる
+    width: 100px;
+    background: #38b48b70;
   }
 }
 </style>
