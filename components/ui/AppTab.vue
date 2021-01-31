@@ -16,7 +16,6 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import consola from 'consola'
 import { AppTab } from '~/types/appTab'
 export default Vue.extend({
   name: 'AppTabs',
@@ -49,7 +48,6 @@ export default Vue.extend({
   },
   mounted() {
     this.$data.slide.style.width = this.$refs.tab[0].clientWidth + 20 + 'px'
-    consola.info(this.$data.slide.style.width)
   },
   methods: {
     handleClick(index: number, tab: String) {
