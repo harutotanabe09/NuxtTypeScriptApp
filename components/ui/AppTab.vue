@@ -3,21 +3,20 @@
     <div
       v-for="(item, index) in items"
       :key="item.label"
+      ref="tab"
       class="item"
       :class="{ '-active': value === item.label }"
       @click="handleClick(index, item.label)"
     >
       {{ item.name }}
     </div>
-    <div
-      class="slider"
-      :style="'transform:translateX(' + activetab * tabwidth + 'px)'"
-    ></div>
+    <div class="slider" :style="slide.style"></div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
+import consola from 'consola'
 import { AppTab } from '~/types/appTab'
 export default Vue.extend({
   name: 'AppTabs',
@@ -25,6 +24,12 @@ export default Vue.extend({
     return {
       activetab: 0,
       tabwidth: 100,
+      slide: {
+        style: {
+          width: 0,
+          transform: 0,
+        },
+      },
     }
   },
   props: {
@@ -42,11 +47,16 @@ export default Vue.extend({
       default: 'default',
     },
   },
+  mounted() {
+    this.$data.slide.style.width = this.$refs.tab[0].clientWidth + 20 + 'px'
+    consola.info(this.$data.slide.style.width)
+  },
   methods: {
     handleClick(index: number, tab: String) {
-      this.$data.activetab = index
       this.$emit('change', tab)
       this.$emit('input', tab)
+      this.$data.slide.style.transform =
+        'translateX(' + index * this.$data.tabwidth + 'px)'
     },
   },
 })
@@ -72,7 +82,6 @@ export default Vue.extend({
     bottom: 0;
     height: 100%;
     // TODO 高さが直打ちになる
-    width: 100px;
     background: #38b48b70;
   }
 }
