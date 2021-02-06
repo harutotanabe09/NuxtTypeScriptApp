@@ -1,6 +1,23 @@
 <template>
   <div id="app">
-    <app-side-menu :menus="menus" class="menu" />
+    <v-app>
+      <v-navigation-drawer v-model="drawer" app class="sidemenu">
+        <v-list>
+          <div>Menu Top</div>
+          <v-list-group v-for="menu in menus" :key="menu.text" no-action>
+            <v-list-item slot="activator" :to="menu.route">
+              <img class="icon" :alt="menu.text" />
+              <v-list-item-title>{{ menu.text }}</v-list-item-title>
+            </v-list-item>
+            <v-list-item v-for="sub in menu.subLinks" :key="sub.text">
+              <v-list-item-title :to="sub.route">{{
+                sub.text
+              }}</v-list-item-title>
+            </v-list-item>
+          </v-list-group>
+        </v-list>
+      </v-navigation-drawer>
+    </v-app>
   </div>
 </template>
 
@@ -8,7 +25,7 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'Sample',
-  layout: 'index',
+  layout: 'normal',
   data: () => ({
     drawer: true,
     menus: [

@@ -70,6 +70,14 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/vuetify',
   ],
+  /*
+   ** vuetify module configuration
+   ** https://github.com/nuxt-community/vuetify-module
+   */
+  vuetify: {
+    customVariables: ['~/assets/style/variables.scss'],
+    defaultAssets: false,
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
