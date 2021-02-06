@@ -52,6 +52,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
     'nuxt-webfontloader',
+    '@nuxtjs/vuetify',
   ],
 
   webfontloader: {
