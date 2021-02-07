@@ -75,7 +75,7 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ['~/assets/style/variables.scss'],
+    // customVariables: ['~/assets/style/variables.scss'],
     defaultAssets: false,
   },
 
