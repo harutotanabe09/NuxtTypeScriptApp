@@ -1,6 +1,37 @@
 <template>
   <div id="app">
-    <app-side-menu :menus="menus" class="menus" />
+    <v-app>
+      <v-navigation-drawer v-model="drawer" app dark class="primary">
+        <v-list>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title class="title">
+                <span class="font-weight-bold">Al-Mehmood</span>
+              </v-list-item-title>
+              <v-list-item-subtitle>Transport Company</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+          <v-divider></v-divider>
+          <v-list-group
+            v-for="navLink in navLinks"
+            :key="navLink.text"
+            no-action
+          >
+            <v-list-item slot="activator" :to="navLink.route">
+              <v-list-item-icon>
+                <v-icon>{{ navLink.icon }}</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>{{ navLink.text }}</v-list-item-title>
+            </v-list-item>
+            <div v-for="sub in navLink.subLinks" :key="sub.text">
+              <v-list-item :to="sub.route">
+                <v-list-item-title>{{ sub.text }}</v-list-item-title>
+              </v-list-item>
+            </div>
+          </v-list-group>
+        </v-list>
+      </v-navigation-drawer>
+    </v-app>
   </div>
 </template>
 
@@ -8,7 +39,7 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'Sample',
-  layout: 'index',
+  layout: 'normal',
   data: () => ({
     drawer: true,
     menus: [
@@ -64,9 +95,3 @@ export default Vue.extend({
   }),
 })
 </script>
-
-<style lang="scss" scoped>
-.menus {
-  background: burlywood;
-}
-</style>
