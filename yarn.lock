@@ -14347,6 +14347,14 @@ sass-loader@^10.1.1:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
+sass-loader@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-11.1.0.tgz#302a83e41834a7ac0cc9d7591e52688ef4ed92af"
+  integrity sha512-TS8KtLtMAqK68lBs0PRzoGf7ndz9m7pKo4BXvUzjGDDgWEY0qcoMMRVpaHfYM0i3/E6UsererqIpjs7dVA/p7A==
+  dependencies:
+    klona "^2.0.4"
+    neo-async "^2.6.2"
+
 sass-resources-loader@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/sass-resources-loader/-/sass-resources-loader-2.1.1.tgz#a231b7c4e326d9c8d141909c901233bef9453151"
@@ -15979,11 +15987,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typescript@~4.0:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.5.tgz#ae9dddfd1069f1cb5beb3ef3b2170dd7c1332389"
-  integrity sha512-ywmr/VrTVCmNTJ6iV2LwIrfG1P+lv6luD8sUJs+2eI9NLGigaN+nUQc13iHqisq7bra9lnmUSYqbJvegraBOPQ==
 
 typescript@~4.1:
   version "4.1.3"
